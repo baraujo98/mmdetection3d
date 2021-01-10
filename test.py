@@ -7,7 +7,7 @@ checkpoint_file = 'checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_2020
 model = init_detector(config_file, checkpoint_file, device='cuda:0')
 
 # test a single image and show the results
-point_cloud = 'test.bin'
+point_cloud = 'demo/000004.bin'
 result, data = inference_detector(model, point_cloud)
 # visualize the results and save the results in 'results' folder
 model.show_results(data, result, out_dir='results')
